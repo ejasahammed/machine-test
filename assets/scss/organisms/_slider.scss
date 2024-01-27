@@ -1,0 +1,109 @@
+.wrg-slider {
+    position: relative;
+    background: $color-secondary;
+    @include mobile {
+        background: $color-primary;
+
+        &__img {
+            width: 250px;
+        }
+    }
+
+    &__bg {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center bottom;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__outer {
+        padding-bottom: 200px;
+        &.slick-slider {
+            margin-bottom: 0;
+        }
+        .slick-list,
+        .slick-track {
+            height: 100%;
+        }
+        .slick-dots {
+            bottom: 20%;
+            left: 30%;
+            li {
+                button {
+                    padding: 0;
+                    position: relative;
+                    &::before {
+                        font-size: 24px;
+                        color: $color-white;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: auto;
+                        height: auto;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
+
+        @include mobile {
+            padding-bottom: 50px;
+            .slick-dots {
+                bottom: 20px;
+                left: 0px;
+            }
+        }
+    }
+
+    &__inner {
+        display: flex !important;
+        align-items: center;
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__content {
+        h1 {
+            font-size: 4.8rem;
+            padding-bottom: $spacer-4;
+            font-weight: $font-semi-bold;
+            color: $color-white;
+        }
+        
+        p {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.70);
+            padding-bottom: $spacer-5;
+        }
+
+        @include tablet {
+
+            h1 {
+                font-size: 3.4rem;
+            }
+        }
+
+        @include mobile {
+
+            h1 {
+                font-size: 3rem;
+                padding: $spacer-3 $spacer-0;
+            }
+
+            p {
+                padding-bottom: $spacer-3;
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

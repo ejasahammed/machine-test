@@ -1,0 +1,152 @@
+.wrg-form {
+    background: $color-secondary;
+    padding: 100px $spacer-0 204px;
+    
+    .content-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @include tablet {
+        padding: $spacer-5 $spacer-0;
+    }
+
+    @include mobile {
+        padding: $spacer-4 $spacer-0;
+    }
+
+    &__outer {
+        width: 768px;
+        padding: 64px;
+        border-radius: 8px;
+        background: $color-white;
+        box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.10), 0px 23px 23px 0px rgba(0, 0, 0, 0.09), 0px 51px 31px 0px rgba(0, 0, 0, 0.05), 0px 91px 36px 0px rgba(0, 0, 0, 0.01), 0px 142px 40px 0px rgba(0, 0, 0, 0.00);
+
+        h2 {
+            font-size: 4rem;
+            font-weight: $font-bold;
+            text-align: center;
+            padding-bottom: $spacer-3;
+        }
+
+        p {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        @include tablet {
+            width: 100%;
+            padding: $spacer-4;
+            
+            h2 {
+                font-size: 3.4rem;
+            }
+
+            p {
+               font-size: 1.6rem;
+            }
+        }
+    
+        @include mobile {
+            padding: $spacer-3;
+
+            h2 {
+                font-size: 2.8rem;
+            }
+
+            p {
+               font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding-top: 48px;
+
+        @include tablet {
+            padding-top: $spacer-4;
+        }
+    
+        @include mobile {
+            padding-top: $spacer-3;
+        }
+    }
+
+    &__input-group {
+        display: flex;
+        justify-content: space-between;
+
+        .wrg-form__input-box {
+            width: calc(50% - 16px);
+        }
+
+        @include mobile-tablet {
+            flex-direction: column;
+
+            .wrg-form__input-box {
+                width: 100%;
+            }
+        }
+        
+    }
+
+    &__input-box {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: $spacer-4;
+
+        @include mobile {
+            padding-bottom: $spacer-3;
+        }
+
+        label {
+            font-size: 1.6rem;
+            padding-bottom: $spacer-2;
+        }
+
+        input {
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            height: 48px;
+            padding: 12px;
+            font-size: 1.6rem;
+        }
+
+        textarea {
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            padding: 12px;
+            min-height: 180px;
+            font-size: 1.6rem;
+
+            &::placeholder{
+                color: $color-gray;
+                font-size: 1.6rem;
+            }
+        }
+
+        select {
+            border-radius: 4px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            padding: 12px;
+            font-size: 1.6rem;
+
+            &::placeholder{
+                color: $color-gray;
+                font-size: 1.6rem;
+            }
+
+            option {
+                color: $color-gray;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    &__submit {
+        text-align: center;
+    }
+}

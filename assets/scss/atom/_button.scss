@@ -1,0 +1,21 @@
+.wrg-button {
+    background-color: $color-blue;
+    padding: 12px 20px;
+    color: $color-white;
+    display: inline-flex;
+    overflow: hidden;
+    font-size: 1.5rem;
+    font-weight: $font-bold;
+    border: 1px solid $color-blue;
+    border-radius: 4px;
+    text-transform: capitalize;
+    min-width: 93px;
+    justify-content: center;
+    transition: 0.3s all;
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-blue;
+        border-color: $color-blue;
+    }
+}
